@@ -19,13 +19,6 @@ SocialNetwork.factory('authentication', function ($http, baseUrl) {
             }).error(error, status, headers);
     };
 
-    service.GetUserFullData = function (username, success, error) {
-        $http.get(serviceUrl + username)
-            .success(function (data, status, headers, config) {
-                success(data);
-            }).error(error, status, headers);
-    };
-
     service.Logout = function (success, error) {
         $http.post(serviceUrl + '/logout/')
             .success(function (data, status, headers, config) {
@@ -48,11 +41,11 @@ SocialNetwork.factory('authentication', function ($http, baseUrl) {
         return localStorage['username'];
     };
 
-    service.isLogedIn = function () {
+    service.IsLoggedIn = function () {
         return localStorage['accessToken'];
     };
 
-    service.clearCredentials = function () {
+    service.ClearCredentials = function () {
         localStorage.clear();
     };
 
