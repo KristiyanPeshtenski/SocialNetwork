@@ -1,51 +1,61 @@
+'use strict';
+
 SocialNetwork.factory('authentication', function ($http, baseUrl) {
     var service = {};
 
-    var serviceUrl = baseUrl + '/users/';
+    var serviceUrl = baseUrl + 'users/';
 
     service.Register = function (registerData, success, error) {
-        $http.post(serviceUrl + '/register/', registerData)
+        $http.post(serviceUrl + 'register/', registerData)
             .success(function (data, status, headers, config) {
                 success(data);
-        }).error(error);
+        }).error(error, status, headers);
     };
 
     service.Login = function (loginData, success, error) {
-        $http.post(serviceUrl + '/login/', loginData)
+        $http.post(serviceUrl + 'login/', loginData)
             .success(function (data, status, headers, config) {
                 success(data);
-            }).error(error);
+            }).error(error, status, headers);
     };
 
     service.GetUserFullData = function (username, success, error) {
         $http.get(serviceUrl + username)
             .success(function (data, status, headers, config) {
                 success(data);
-            }).error(error);
-    };
-
-    service.GetUserPreviewData = function (username, success, error) {
-        $http.get(serviceUrl + username + '/preview/')
-            .success(function (data, status, headers, config) {
-                success(data);
-            }).error(error);
+            }).error(error, status, headers);
     };
 
     service.Logout = function (success, error) {
         $http.post(serviceUrl + '/logout/')
             .success(function (data, status, headers, config) {
                 success(status);
-            }).error(error);
+            }).error(error, status, headers);
+    };
+
+    service.SetCredentials = function (serverData) {
+        localStorage['accessToken'] = serverData.access_token;
+        localStorage['username'] = serverData.username;
     };
     
     service.getHeaders = function () {
         return{
-            Authentication: 'Bearer' + localStorage['accessToken']
+            Authentication: 'bearer' + localStorage['accessToken']
         }
     };
 
-    service.clearCreditentials = function () {
-        localstorage.clear();
+    service.getUsername = function () {
+        return localStorage['username'];
     };
+
+    service.isLogedIn = function () {
+        return localStorage['accessToken'];
+    };
+
+    service.clearCredentials = function () {
+        localStorage.clear();
+    };
+
+    return service;
 });
 
