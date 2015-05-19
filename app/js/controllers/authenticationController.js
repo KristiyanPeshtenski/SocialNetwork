@@ -14,10 +14,11 @@ SocialNetwork.controller('AuthenticationController', function ($scope, $location
                 notificationService.showInfo('Login Successful.');
                 authentication.SetCredentials(serverData);
                 ClearData();
-                $location.path('user/home');
+                $location.path('/user/home');
             },
-            function (serverData) {
+            function (error) {
                 notificationService.showError('Unsuccessful login.');
+                console.log(error);
             });
     };
 

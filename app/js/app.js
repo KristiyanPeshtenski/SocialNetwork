@@ -8,8 +8,9 @@ SocialNetwork.config(function ($routeProvider) {
             controller: 'AuthenticationController'
         });
 
-    $routeProvider.when('user/home', {
-
+    $routeProvider.when('/user/home', {
+        templateUrl: 'partials/userHome.html',
+        controller: 'mainController'
     });
 
     $routeProvider.otherwise({redirectTo: '/'});

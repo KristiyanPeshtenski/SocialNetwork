@@ -9,7 +9,7 @@ SocialNetwork.factory('ownDataService', function ($http, baseUrl) {
     ownDataService.GetNewsFeed = function (headers, success, error) {
         $http.get(ownDataServiceUrl + '/feed/',
             {
-                params: this.paginationRarams,
+                params: this.params,
                 headers: headers
             })
             .success(function (data, status, headers, config) {
@@ -46,7 +46,7 @@ SocialNetwork.factory('ownDataService', function ($http, baseUrl) {
     };
         //TODO: pass url params from controller
     ownDataService.ApproveFriendRequest = function (requestId, headers, success, error) {
-        $http.put(ownDataServiceUrl + 'requests/' + requestId + '/status=approved', {},
+        $http.put(ownDataServiceUrl + 'requests/' + requestId, {},
             {
                 params: this.params,
                 headers: headers
@@ -58,7 +58,7 @@ SocialNetwork.factory('ownDataService', function ($http, baseUrl) {
 
     //TODO: pass url params from controller
     ownDataService.RejectFriendRequest = function (requestId, headers, success, error) {
-        $http.put(ownDataServiceUrl + 'requests/' + requestId + '/status=delete', {},
+        $http.put(ownDataServiceUrl + 'requests/' + requestId, {},
             {
                 params: this.params,
                 headers: headers
@@ -71,7 +71,7 @@ SocialNetwork.factory('ownDataService', function ($http, baseUrl) {
     ownDataService.ChangePassword = function (psswordData, headers, success, error) {
         $http.put(ownDataServiceUrl + 'changepassword/', ppsswordData, {headers: headers})
             .success(function (data, status, headers, config) {
-                success(success);
+                success(data);
             }).error(error);
     };
 
@@ -87,5 +87,4 @@ SocialNetwork.factory('ownDataService', function ($http, baseUrl) {
     };
 
     return ownDataService;
-
 });

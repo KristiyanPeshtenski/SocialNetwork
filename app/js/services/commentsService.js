@@ -7,7 +7,7 @@ SocialNetwork.factory('commentsServices', function ($http, baseUrl) {
 
     commentsServices.GetPostComments = function (postId, headers, success, error) {
         $http.get(commentsUrl)
-    }
 
+}
 
 });

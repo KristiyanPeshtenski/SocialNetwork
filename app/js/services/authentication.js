@@ -9,31 +9,31 @@ SocialNetwork.factory('authentication', function ($http, baseUrl) {
         $http.post(serviceUrl + 'register/', registerData)
             .success(function (data, status, headers, config) {
                 success(data);
-        }).error(error, status, headers);
+        }).error(error, status);
     };
 
     service.Login = function (loginData, success, error) {
         $http.post(serviceUrl + 'login/', loginData)
             .success(function (data, status, headers, config) {
                 success(data);
-            }).error(error, status, headers);
+            }).error(error, status);
     };
 
     service.Logout = function (success, error) {
         $http.post(serviceUrl + '/logout/')
             .success(function (data, status, headers, config) {
                 success(status);
-            }).error(error, status, headers);
+            }).error(error, status);
     };
 
     service.SetCredentials = function (serverData) {
         localStorage['accessToken'] = serverData.access_token;
-        localStorage['username'] = serverData.username;
+        localStorage['username'] = serverData.userName;
     };
     
     service.getHeaders = function () {
         return{
-            Authentication: 'bearer' + localStorage['accessToken']
+            Authorization: 'Bearer' + ' ' + localStorage['accessToken']
         }
     };
 
