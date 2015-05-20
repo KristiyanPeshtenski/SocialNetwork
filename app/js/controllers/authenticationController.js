@@ -23,7 +23,7 @@ SocialNetwork.controller('AuthenticationController', function ($scope, $location
     };
 
     $scope.register = function () {
-        authentication.register($scope.registerData,
+        authentication.Register($scope.registerData,
             function (serverData) {
                 notificationService.showInfo('Register Successful.');
                 authentication.SetCredentials(serverData);

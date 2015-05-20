@@ -4,9 +4,9 @@ SocialNetwork.constant('baseUrl', 'http://softuni-social-network.azurewebsites.n
 
 SocialNetwork.config(function ($routeProvider) {
     $routeProvider.when('/', {
-            templateUrl: 'partials/publicHomeScreen.html',
-            controller: 'AuthenticationController'
-        });
+        templateUrl: 'partials/publicHomeScreen.html',
+        controller: 'AuthenticationController'
+    });
 
     $routeProvider.when('/user/home', {
         templateUrl: 'partials/userHome.html',
