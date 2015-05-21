@@ -1,24 +1,25 @@
-    <!--Header with login-->
-    <div class="container">
-    <div class="row"></div>
-<div class="navbar-inverse navbar-fixed-top">
-    <div class="container">
-        <div class="navbar-header">
-            <a href="#/" class="navbar-brand">Social Network</a>
+<!--Header with login-->
+<div class="container">
+    <div class="navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="#/" class="navbar-brand">Social Network</a>
+            </div>
+            <form class="navbar-form navbar-right" role="search" ng-submit="login()">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Username" ng-model="loginData.username"
+                           required>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Password" ng-model="loginData.password"
+                           required>
+                </div>
+                <button type="submit" class="btn btn-danger">Sign In</button>
+            </form>
         </div>
-        <form class="navbar-form navbar-right" role="search" ng-submit="login()">
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="Username" ng-model="loginData.username" required>
-            </div>
-            <div class="form-group">
-                <input type="password" class="form-control" placeholder="Password" ng-model="loginData.password" required>
-            </div>
-            <button type="submit" class="btn btn-danger">Sign In</button>
-        </form>
     </div>
 </div>
-</div>
-    <!--Register form-->
+<!--Register form-->
 <div class="row">
     <div class="well bs-component col-lg-4 col-lg-offset-6">
         <form class="form-horizontal" name="register-form" ng-submit="register()">
@@ -27,20 +28,23 @@
                 <legend>Register Here</legend>
                 <div class="form-group">
                     <label class="col-lg-2 control-label" for="register-username">Username:</label>
+
                     <div class="col-lg-10">
                         <input type="text" class="form-control" id="register-username"
-                               placeholder="username" ng-model="registerData.username" required />
+                               placeholder="username" ng-model="registerData.username" required/>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-lg-2 control-label" for="register-password">Password:</label>
+
                     <div class="col-lg-10">
                         <input type="password" class="form-control" id="register-password"
-                               placeholder="password" ng-model="registerData.password" required />
+                               placeholder="password" ng-model="registerData.password" required/>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-lg-2 control-label" for="register-confirmPassword">Confirm Password:</label>
+
                     <div class="col-lg-10">
                         <input type="password" class="form-control" id="register-confirmPassword"
                                placeholder="confirm password" ng-model="registerData.confirmPassword" required/>
@@ -48,18 +52,20 @@
                 </div>
 
                 <div class="form-group">
-                        <label class="col-lg-2 control-label" for="register-name">Name:</label>
-                        <div class="col-lg-10">
-                            <input type="text" class="form-control" id="register-name"
-                                    ng-model="registerData.name" placeholder="Name" required />
-                        </div>
+                    <label class="col-lg-2 control-label" for="register-name">Name:</label>
+
+                    <div class="col-lg-10">
+                        <input type="text" class="form-control" id="register-name"
+                               ng-model="registerData.name" placeholder="Name" required/>
                     </div>
+                </div>
 
                 <div class="form-group">
                     <label class="col-lg-2 control-label" for="register-email">Email:</label>
+
                     <div class="col-lg-10">
                         <input type="text" class="form-control" id="register-email"
-                               placeholder="Email" ng-model="registerData.email" />
+                               placeholder="Email" ng-model="registerData.email"/>
                     </div>
                 </div>
 
@@ -76,7 +82,7 @@
                     <label>
                         Other <input type="radio" value="other" name="gender" ng-model="registerData.gender"/>
                     </label>
-                 </div>
+                </div>
 
                 <div class="form-group">
                     <input type="submit" class="btn-danger"/>
