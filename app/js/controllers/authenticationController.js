@@ -34,13 +34,4 @@ SocialNetwork.controller('AuthenticationController', function ($scope, $location
                 notificationService.showError(msg)
             })
     };
-
-    $scope.Logout = function () {
-        authentication.Logout(function () {
-            notificationService.showInfo('Logout successful.');
-            cleanData();
-            authentication.ClearCredentials();
-
-        });
-    }
 });

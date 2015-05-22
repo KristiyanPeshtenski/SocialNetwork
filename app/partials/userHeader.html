@@ -1,4 +1,4 @@
-<div class="navbar navbar-default navbar-fixed-top" ng-controller="userHeaderController">
+<div class="navbar navbar-default navbar-fixed-top" ng-controller="UserHeaderController">
     <div class="container">
         <div class="navbar-header">
             <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
@@ -29,48 +29,14 @@
                 </li>
                 <li class="active"><a href="#/user/home">Home</a>
                 </li>
-                <li><a href="#">Requests</a>
+                <li><a href="#">Requests <span class="badge">{{requestsCount}}</span></a>
                 </li>
-                <li><a href="#">Edit Profile</a>
+                <li><a href="#/user/edit-profile">Edit Profile</a>
                 </li>
-                <li><a href="#">Change Password</a>
+                <li><a href="#/user/change-password">Change Password</a>
                 </li>
-                <li><a href="#">Logout</a>
+                <li><a href="#" ng-click="Logout()">Logout</a>
             </ul>
-
         </div>
     </div>
 </div>
-
-<!--<div class="container" ng-controller="userHeaderController">-->
-<!--<div class="navbar-default navbar-fixed-top" >-->
-<!--<div class="container">-->
-<!--&lt;!&ndash;profile picture and username&ndash;&gt;-->
-<!--<div class="navbar-header">-->
-<!--<a href="/#/users/:{{ownInfo.username}}" class="navbar-brand">-->
-<!--<img class="pull-left img-responsive img-thumbnail" ng-src="{{ownInfo.profileImageData || 'img/no_avatar.png'}}"/>-->
-<!--<span>{{ownInfo.username}}</span>-->
-<!--</a>-->
-<!--</div>-->
-<!--&lt;!&ndash;menu buttons&ndash;&gt;-->
-<!--<ul class="nav navbar-nav">-->
-<!--<li>-->
-<!--&lt;!&ndash;Home&ndash;&gt;-->
-<!--<a href="/#/user/home"><span class="glyphicon-home"></span></a>-->
-<!--</li>-->
-<!--<li>-->
-<!--&lt;!&ndash;Change profile&ndash;&gt;-->
-<!--<a href="/#/user/changeProfile"> <span class="glyphicon glyphicon-cog"></span> </span></a>-->
-<!--</li>-->
-<!--</ul>-->
-<!--<form class="navbar-form navbar-right" role="search">-->
-<!--<div class="input-group">-->
-<!--<input type="text" class="form-control" placeholder="Search" name="q">-->
-<!--<div class="input-group-btn">-->
-<!--<button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>-->
-<!--</div>-->
-<!--</div>-->
-<!--</form>-->
-<!--</div>-->
-<!--</div>-->
-<!--</div>-->

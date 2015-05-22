@@ -9,8 +9,18 @@ SocialNetwork.config(function ($routeProvider) {
     });
 
     $routeProvider.when('/user/home', {
-        templateUrl: 'partials/userHome.html',
+        templateUrl: 'partials/userHomeScreen.html',
         controller: 'mainController'
+    });
+
+    $routeProvider.when('/user/edit-profile/', {
+        templateUrl: 'partials/editProfileScreen.html',
+        controller: 'EditProfileController'
+    });
+
+    $routeProvider.when('/user/change-password/', {
+        templateUrl: 'partials/chanePasswordScreen.html',
+        controller: 'ChangePasswordController'
     });
 
     $routeProvider.otherwise({redirectTo: '/'});
