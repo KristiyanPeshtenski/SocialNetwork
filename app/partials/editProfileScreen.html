@@ -1,10 +1,82 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
+<div ng-include="'partials/userHeader.html'"></div>
+    <!--TODO: Add remove image buttons-->
+<div class="container edit-profile-container">
+    <div class="well bs-component col-lg-8 col-lg-offset-2">
+        <form class="form-horizontal" name="editProfile" ng-submit="editUserProfile()">
+            <fieldset>
+                <legend>Edit Profile</legend>
+                <!--image form-->
+                <div class="col-lg-4">
+                    <div class="fileinput fileinput-new" data-provides="fileinput">
+                        <div class="fileinput-preview thumbnail" id="profileImage" data-trigger="fileinput"
+                             style="width: 200px; height: 250px;">
+                            <img ng-src="{{currentUser.profileImageData}}"/>
+                        </div>
+                        <div>
+                            <span class="btn btn-default btn-file">
+                                <span>Browse...</span>
+                                <input type="file" class="form-control"
+                                       id="profile-image-input" name="profile-image-input"/>
+                            </span>
+                        </div>
+                    </div>
 
-</body>
-</html>
+                </div>
+                <!--data form-->
+                <div class="col-lg-8">
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label" for="currentUser-name">Name:</label>
+
+                        <div class="col-lg-10">
+                            <input type="text" class="form-control" id="currentUser-name"
+                                   placeholder="name" ng-model="currentUser.name"/>
+                        </div>
+                    </div>
+                    <!--email-->
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label" for="currentUser-email">Email:</label>
+
+                        <div class="col-lg-10">
+                            <input type="email" class="form-control" id="currentUser-email"
+                                   placeholder="email" ng-model="currentUser.email"/>
+                        </div>
+                    </div>
+                    <!--gender-->
+                    <div class="form-group">
+                        <label class="col-lg-2"> Gender: </label>
+                        <label>
+                            Male <input type="radio" value="male" name="gender" id="male"
+                                        ng-model="currentUser.gender"/>
+                        </label>
+
+                        <label>
+                            Female <input type="radio" value="female" name="gender" ng-model="currentUser.gender"/>
+                        </label>
+
+                        <label>
+                            Other <input type="radio" value="other" name="gender" ng-model="currentUser.gender"/>
+                        </label>
+                    </div>
+                    <!--cover image-->
+                    <div class="form-group">
+                        <div class="fileinput fileinput-new" data-provides="fileinput">
+                            <div class="fileinput-preview thumbnail" id="coverImage" data-trigger="fileinput"
+                                 style="width: 350px; height: 85px;">
+                                <img ng-src="{{currentUser.coverImageData}}"/>
+                            </div>
+                            <div>
+                            <span class="btn btn-default btn-file">
+                                <span>Browse...</span>
+                                <input type="file" class="form-control" id="addCover" name="adCover"/>
+                            </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Edit Profile" class="btn btn-default"/>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>

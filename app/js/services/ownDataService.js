@@ -17,28 +17,28 @@ SocialNetwork.factory('ownDataService', function ($http, baseUrl) {
             }).error(error);
 };
 
-    ownDataService.getOwnData = function (headers, success, error) {
+    ownDataService.GetOwnData = function (headers, success, error) {
         $http.get(ownDataServiceUrl, {headers: headers})
             .success(function (data, status, headers, config) {
                 success(data);
             }).error(error);
     };
 
-    ownDataService.getFriends = function (headers, success, error) {
+    ownDataService.GetFriends = function (headers, success, error) {
         $http.get(ownDataServiceUrl + 'friends/', {headers: headers})
             .success(function (data, status, headers, config) {
                 success(data);
             }).error(error);
     };
 
-    ownDataService.getFriendRequests = function (headers, success, error) {
+    ownDataService.GetFriendRequests = function (headers, success, error) {
         $http.get(ownDataServiceUrl + 'requests/', {headers: headers})
             .success(function (data, status, headers, config) {
                 success(data);
             }).error(error);
     };
 
-    ownDataService.sendFriendRequest = function (friendUsername, headers, success, error) {
+    ownDataService.SendFriendRequest = function (friendUsername, headers, success, error) {
         $http.post(ownDataServiceUrl + 'requests/' + friendUsername, {}, {headers: headers})
             .success(function (data, status, headers, config) {
                 success(data);
@@ -68,14 +68,14 @@ SocialNetwork.factory('ownDataService', function ($http, baseUrl) {
             }).error(error);
     };
     
-    ownDataService.ChangePassword = function (psswordData, headers, success, error) {
-        $http.put(ownDataServiceUrl + 'changepassword/', ppsswordData, {headers: headers})
+    ownDataService.ChangePassword = function (passwordData, headers, success, error) {
+        $http.put(ownDataServiceUrl + 'changepassword/', passwordData, {headers: headers})
             .success(function (data, status, headers, config) {
                 success(data);
             }).error(error);
     };
 
-    ownDataService.editProfile = function (userData, headers, success, error) {
+    ownDataService.EditProfile = function (userData, headers, success, error) {
         $http.put(ownDataServiceUrl, userData, {headers: headers})
             .success(function (data, status, headers, config) {
                 success(data);

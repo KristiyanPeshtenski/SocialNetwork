@@ -5,7 +5,7 @@ SocialNetwork.controller('UserHeaderController', function ($scope, $location, au
 
 
     $scope.GetOwnInfo = function () {
-        ownDataService.getOwnData(authentication.getHeaders(),
+        ownDataService.GetOwnData(authentication.getHeaders(),
             function (serverData) {
                 $scope.ownInfo = serverData;
             }, function (error) {
@@ -14,7 +14,7 @@ SocialNetwork.controller('UserHeaderController', function ($scope, $location, au
     };
 
     $scope.GetFriendRequests = function () {
-        ownDataService.getFriendRequests(authentication.getHeaders(),
+        ownDataService.GetFriendRequests(authentication.getHeaders(),
             function (serverData) {
                 $scope.requests = serverData;
                 $scope.requestsCount = $scope.requests.length;

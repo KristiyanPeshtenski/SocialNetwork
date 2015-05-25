@@ -19,7 +19,7 @@ SocialNetwork.config(function ($routeProvider) {
     });
 
     $routeProvider.when('/user/change-password/', {
-        templateUrl: 'partials/chanePasswordScreen.html',
+        templateUrl: 'partials/changePasswordScreen.html',
         controller: 'ChangePasswordController'
     });
 
