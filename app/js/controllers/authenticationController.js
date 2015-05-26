@@ -23,15 +23,16 @@ SocialNetwork.controller('AuthenticationController', function ($scope, $location
     };
 
     $scope.register = function () {
-        authentication.Register($scope.registerData,
+        authentication.register($scope.registerData,
             function (serverData) {
                 notificationService.showInfo('Register Successful.');
                 authentication.SetCredentials(serverData);
                 ClearData();
                 $location.path('user/home');
             },
-            function (serverData) {
-                notificationService.showError(msg)
+            function (error) {
+                notificationService.showError('register fail.');
+                console.log(error);
             })
     };
 });

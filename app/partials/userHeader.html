@@ -11,9 +11,9 @@
                 <div class="form-group">
                     <div class="input-group">
                         <input type="text" class="form-control input-sm" placeholder="Search...">
-                            <span class="input-group-btn">
-                                <button class="btn-sm btn-default" type="button">Search</button>
-                            </span>
+                        <span class="input-group-btn">
+                            <button class="btn-sm btn-default" type="button"> Search </button>
+                        </span>
                     </div>
                 </div>
             </form>
@@ -27,16 +27,45 @@
                         {{ownInfo.username}}
                     </a>
                 </li>
-                <li class="active"><a href="#/user/home">Home</a>
+                <li><a href="#/user/home">Home</a>
                 </li>
-                <li><a href="#">Requests <span class="badge">{{requestsCount}}</span></a>
+                <li class="dropdown open">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        Requests <span ng-if="hasPendingRequests" class="badge">{{requestsCount}} </span>
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li ng-repeat="request in pendingRequests">
+                            <div class="pull-left">
+                                <img ng-src="{{request.user.profileImageData || 'img/no_avatar.png'}}" class="img-thumbnail img-small" alt=""/>
+                            </div>
+                            <div class="pull-right">
+                                <span>{{request.user.name}}</span>
+                            </div>
+                            <div class="col-sm-3">
+                                <a href="" ng-click="approveFriendRequest(request)" class="btn btn-info btn-sm">Accept</a>
+                            </div>
+                            <div class="col-sm-3 col-sm-offset-2">
+                                <a href="" ng-click="rejectFriendRequest(request)" class="btn btn-info btn-sm">Decline</a>
+                            </div>
+                        </li>
+                    </ul>
                 </li>
-                <li><a href="#/user/edit-profile">Edit Profile</a>
+                <li>
+                    <a href="#/user/edit-profile">Edit Profile</a>
                 </li>
-                <li><a href="#/user/change-password">Change Password</a>
+                <li>
+                    <a href="#/user/change-password">Change Password</a>
                 </li>
-                <li><a href="#" ng-click="Logout()">Logout</a>
+                <li>
+                    <a href="#" ng-click="Logout()">Logout</a>
+                </li>
             </ul>
         </div>
     </div>
 </div>
+
+
+<!--<div ng-mouseleave="hideFriendRequestBox()" ng-if="hasPendingRequests"-->
+     <!--ng-include="'partials/friendRequestsBox.html'"></div>-->
+

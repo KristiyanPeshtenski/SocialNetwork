@@ -53,7 +53,7 @@ SocialNetwork.factory('userDataService', function ($http, baseUrl) {
             }).error(error);
     };
 
-    userDataService.ClearParams = function () {
+    userDataService.clearParams = function () {
         userDataService.params = {};
     };
 

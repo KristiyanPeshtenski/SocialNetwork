@@ -6,7 +6,7 @@ SocialNetwork.controller('EditProfileController', function ($scope, $location, a
     $scope.currentUser = {};
 
     function getUserData(){
-        ownDataService.GetOwnData(authentication.getHeaders(),
+        ownDataService.getOwnData(authentication.getHeaders(),
             function (serverData) {
                 $scope.currentUser = serverData;
             },
@@ -50,7 +50,7 @@ SocialNetwork.controller('EditProfileController', function ($scope, $location, a
             $scope.currentUser.coverImageChanged = true;
             $scope.currentUser.coverImageData = '';
         }
-        ownDataService.EditProfile($scope.currentUser, authentication.getHeaders(),
+        ownDataService.editProfile($scope.currentUser, authentication.getHeaders(),
             function (serverData) {
                 notificationService.showInfo('Profile updated.');
                 $location.path('/user/home');
