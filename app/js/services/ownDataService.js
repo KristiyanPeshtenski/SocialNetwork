@@ -24,8 +24,15 @@ SocialNetwork.factory('ownDataService', function ($http, baseUrl) {
             }).error(error);
     };
 
-    ownDataService.getFriends = function (headers, success, error) {
+    ownDataService.getOwnFriends = function (headers, success, error) {
         $http.get(ownDataServiceUrl + 'friends/', {headers: headers})
+            .success(function (data, status, headers, config) {
+                success(data);
+            }).error(error);
+    };
+
+    ownDataService.getOwnFriendsPreview = function (headers, success, error) {
+        $http.get(ownDataServiceUrl + 'friends/preview', {headers: headers})
             .success(function (data, status, headers, config) {
                 success(data);
             }).error(error);

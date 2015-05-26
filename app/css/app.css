@@ -10,8 +10,16 @@
 }
 
 body{
-    padding-top: 60px;
+    padding-top: 30px;
     padding-bottom: 30px;
+}
+
+.navbar-default{
+    height: 10%;
+}
+
+.home-screen-header{
+    border-bottom: 2px solid black;
 }
 
 .edit-profile-container{
@@ -33,3 +41,23 @@ legend{
     height: 250px;
     border: 1px solid black;
 }
+
+.home-screen-container{
+    margin-top: 30px;
+}
+
+.pending-requests-name{
+    text-align: center;
+    font-weight: bold;
+}
+
+.img-small{
+    width: 75px;
+    height: 75px;
+    margin: auto;
+}
+
+/*.friend-profile-pic{*/
+    /*width: 75px;*/
+    /*height: 75px;*/
+/*}*/

@@ -1,6 +1,7 @@
 var SocialNetwork = angular.module('SocialNetwork', ['ngRoute']);
 
 SocialNetwork.constant('baseUrl', 'http://softuni-social-network.azurewebsites.net/api/');
+SocialNetwork.constant('pageSize', 5);
 
 SocialNetwork.config(function ($routeProvider) {
     $routeProvider.when('/', {
@@ -10,7 +11,7 @@ SocialNetwork.config(function ($routeProvider) {
 
     $routeProvider.when('/user/home', {
         templateUrl: 'partials/userHomeScreen.html',
-        controller: 'mainController'
+        controller: 'userHomeController'
     });
 
     $routeProvider.when('/user/edit-profile/', {
