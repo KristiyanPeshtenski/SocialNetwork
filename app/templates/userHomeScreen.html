@@ -41,6 +41,20 @@
                 <div class="modal-body">
                     <p>{{feed.postContent}}</p>
                 </div>
+                <div class="modal-footer">
+                    <div class="pull-right">
+                        <!--Like button-->
+                        <button type="button" ng-if="!feed.liked" ng-click="likePost(feed)" class="btn btn-default">
+                            <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                        </button>
+                        <!--Dislike button-->
+                        <button type="button" ng-if="feed.liked" ng-click="dislikePost(feed)" class="btn btn-default">
+                            <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
+                        </button>
+                        <!--number of likes-->
+                        <span class="badge" id="postLikes{{feed.id}}">likes {{feed.likesCount}}</span>
+                    </div>
+                </div>
             </div> <!--close modal-dialog-->
             <a href="" class="btn btn-warning" ng-click="showMoreFeeds()">Show more Feeds</a>
         </div>

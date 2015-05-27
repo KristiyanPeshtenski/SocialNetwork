@@ -1,4 +1,4 @@
-SocialNetwork.controller('UserHomeController', function ($scope, $location, ownDataService,
+SocialNetwork.controller('UserHomeController', function ($scope, $location, ownDataService, postService,
                                                          notificationService, authentication, defaultPageSize) {
 
     $scope.feedsPageSize = defaultPageSize;
@@ -26,6 +26,28 @@ SocialNetwork.controller('UserHomeController', function ($scope, $location, ownD
             },
             function (error) {
                 console.log(error)
+            });
+    };
+    
+    $scope.likePost = function (feed) {
+        postService.likePost(feed.id, authentication.getHeaders(),
+            function (serverData) {
+                feed.liked = serverData.liked;
+                feed.likesCount = serverData.likesCount;
+            },
+            function (error) {
+                console.log(error);
+            });
+    };
+
+    $scope.dislikePost = function (feed) {
+        postService.dislikePost(feed.id, authentication.getHeaders(),
+            function (serverData) {
+                feed.liked = serverData.liked;
+                feed.likesCount = serverData.likesCount;
+            },
+            function (error) {
+                console.log(error);
             });
     };
 

@@ -57,6 +57,10 @@ legend{
     margin: auto;
 }
 
+.glyphicon{
+    font-family: Glyphicons Halflings;
+}
+
 /*.friend-profile-pic{*/
     /*width: 75px;*/
     /*height: 75px;*/

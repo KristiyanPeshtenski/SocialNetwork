@@ -2,21 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="babd1ebd-c948-4718-ba74-787dd876e996" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/userHomeScreen.html" />
-      <change type="DELETED" beforePath="E:\SoftUni\JavaScript\Angular\PracticalProjectRepo\app\partials\userHomeScreen.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/angular/angular-route.js" afterPath="$PROJECT_DIR$/app/lib/angular/angular-route.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/app.js" afterPath="$PROJECT_DIR$/app/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/angular/docs/js/docs.js" afterPath="$PROJECT_DIR$/app/lib/angular/docs/js/docs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/angular/docs/js/docs.min.js" afterPath="$PROJECT_DIR$/app/lib/angular/docs/js/docs.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/services/ownDataService.js" afterPath="$PROJECT_DIR$/app/js/services/ownDataService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/fonts/glyphicons-halflings-regular.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/fonts/glyphicons-halflings-regular.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/css/app.css" afterPath="$PROJECT_DIR$/app/css/app.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/services/postService.js" afterPath="$PROJECT_DIR$/app/js/services/postService.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/controllers/userHomeController.js" afterPath="$PROJECT_DIR$/app/js/controllers/userHomeController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/userHomeScreen.html" afterPath="$PROJECT_DIR$/app/templates/userHomeScreen.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="E:\SoftUni\JavaScript\Angular\PracticalProjectRepo\app\partials\changePasswordScreen.html" afterPath="$PROJECT_DIR$/app/templates/changePasswordScreen.html" />
-      <change type="MOVED" beforePath="E:\SoftUni\JavaScript\Angular\PracticalProjectRepo\app\partials\editProfileScreen.html" afterPath="$PROJECT_DIR$/app/templates/editProfileScreen.html" />
-      <change type="MOVED" beforePath="E:\SoftUni\JavaScript\Angular\PracticalProjectRepo\app\partials\pagination\pagination.html" afterPath="$PROJECT_DIR$/app/templates/pagination/pagination.html" />
-      <change type="MOVED" beforePath="E:\SoftUni\JavaScript\Angular\PracticalProjectRepo\app\partials\publicHomeScreen.html" afterPath="$PROJECT_DIR$/app/templates/publicHomeScreen.html" />
-      <change type="MOVED" beforePath="E:\SoftUni\JavaScript\Angular\PracticalProjectRepo\app\partials\userHeader.html" afterPath="$PROJECT_DIR$/app/templates/userHeader.html" />
     </list>
     <ignored path="angular-seed.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,18 +33,18 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.1923077">
-              <caret line="21" column="56" selection-start-line="21" selection-start-column="56" selection-end-line="21" selection-end-column="56" />
+            <state vertical-scroll-proportion="-1.8846154">
+              <caret line="19" column="54" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="userHomeScreen.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="userHomeScreen.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/userHomeScreen.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.3277311">
-              <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+            <state vertical-scroll-proportion="-7.769231">
+              <caret line="45" column="42" selection-start-line="45" selection-start-column="42" selection-end-line="45" selection-end-column="42" />
               <folding>
                 <element signature="n#div#0;n#div#1;n#div#1;n#!!top" expanded="false" />
               </folding>
@@ -63,17 +56,30 @@
         <entry file="file://$PROJECT_DIR$/app/js/controllers/userHomeController.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="45" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
+              <caret line="32" column="44" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
+              <folding>
+                <element signature="e#301#636#0" expanded="false" />
+                <element signature="e#818#1127#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="postService.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/js/services/postService.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="32" column="6" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ownDataService.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/js/services/ownDataService.js">
+      <file leaf-file-name="changePasswordController.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/js/controllers/changePasswordController.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="79" selection-start-line="7" selection-start-column="79" selection-end-line="7" selection-end-column="79" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -83,7 +89,7 @@
         <entry file="file://$PROJECT_DIR$/app/css/app.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
+              <caret line="49" column="23" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -116,7 +122,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/app/partials/publicScreen.html" />
-        <option value="$PROJECT_DIR$/app/js/services/postService.js" />
         <option value="$PROJECT_DIR$/app/js/services/userDataService.js" />
         <option value="$PROJECT_DIR$/app/js/services/commentsService.js" />
         <option value="$PROJECT_DIR$/app/js/services/notificationService.js" />
@@ -138,15 +143,16 @@
         <option value="$PROJECT_DIR$/app/js/controllers/editProfileController.js" />
         <option value="$PROJECT_DIR$/app/js/controllers/authenticationController.js" />
         <option value="$PROJECT_DIR$/app/partials/userHeader.html" />
-        <option value="$PROJECT_DIR$/app/css/app.css" />
         <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/app/partials/userHomeScreen.html" />
         <option value="$PROJECT_DIR$/app/js/services/ownDataService.js" />
         <option value="$PROJECT_DIR$/app/js/app.js" />
-        <option value="$PROJECT_DIR$/app/js/controllers/userHomeController.js" />
         <option value="$PROJECT_DIR$/app/templates/editProfileScreen.html" />
         <option value="$PROJECT_DIR$/app/templates/changePasswordScreen.html" />
         <option value="$PROJECT_DIR$/app/templates/userHomeScreen.html" />
+        <option value="$PROJECT_DIR$/app/js/controllers/userHomeController.js" />
+        <option value="$PROJECT_DIR$/app/css/app.css" />
+        <option value="$PROJECT_DIR$/app/js/services/postService.js" />
       </list>
     </option>
   </component>
@@ -350,6 +356,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\SoftUni\JavaScript\Angular\PracticalProjectRepo\app\js\controllers" />
+      <recent name="E:\SoftUni\JavaScript\Angular\PracticalProjectRepo\app\fonts" />
       <recent name="E:\SoftUni\JavaScript\Angular\PracticalProjectRepo\app\css" />
       <recent name="E:\SoftUni\JavaScript\Angular\PracticalProjectRepo\app\lib" />
       <recent name="E:\SoftUni\JavaScript\Angular\PracticalProjectRepo\app\img" />
@@ -473,7 +481,13 @@
       <option name="project" value="LOCAL" />
       <updated>1432671276934</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary=" - add display news feed functionality&#10;  - implement show more posts functionality">
+      <created>1432728038850</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1432728038850</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -551,7 +565,9 @@
     <MESSAGE value="- add friend request functionality&#10;    &#10;    -view pending requests&#10;    -accept request&#10;    - reject request" />
     <MESSAGE value=" - fix pending requests view&#10;&#10;  - add own friend preview in user home" />
     <MESSAGE value=" - add display news feed functionality&#10;  - and show more posts" />
-    <option name="LAST_COMMIT_MESSAGE" value=" - add display news feed functionality&#10;  - and show more posts" />
+    <MESSAGE value=" - add display news feed functionality&#10;  - implement show more posts functionality" />
+    <MESSAGE value=" - implement like/dislike post and show likes functionality&#10; - add glyphicon fonts" />
+    <option name="LAST_COMMIT_MESSAGE" value=" - implement like/dislike post and show likes functionality&#10; - add glyphicon fonts" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -764,13 +780,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/services/postService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.82564104">
-          <caret line="63" column="3" selection-start-line="63" selection-start-column="3" selection-end-line="63" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/css/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15178572">
@@ -832,14 +841,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/controllers/changePasswordController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2905983">
-          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/controllers/editProfileController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.33675215">
@@ -888,30 +889,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/services/ownDataService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="79" selection-start-line="7" selection-start-column="79" selection-end-line="7" selection-end-column="79" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.1923077">
-          <caret line="21" column="56" selection-start-line="21" selection-start-column="56" selection-end-line="21" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/editProfileScreen.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.030411448">
@@ -928,10 +905,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/services/ownDataService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2034188">
+          <caret line="7" column="79" selection-start-line="7" selection-start-column="79" selection-end-line="7" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/css/app.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
+          <caret line="49" column="23" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.8846154">
+          <caret line="19" column="54" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
           <folding />
         </state>
       </provider>
@@ -939,18 +940,37 @@
     <entry file="file://$PROJECT_DIR$/app/js/controllers/userHomeController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="45" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
-          <folding />
+          <caret line="32" column="44" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
+          <folding>
+            <element signature="e#301#636#0" expanded="false" />
+            <element signature="e#818#1127#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/userHomeScreen.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3277311">
-          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+        <state vertical-scroll-proportion="-7.769231">
+          <caret line="45" column="42" selection-start-line="45" selection-start-column="42" selection-end-line="45" selection-end-column="42" />
           <folding>
             <element signature="n#div#0;n#div#1;n#div#1;n#!!top" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/services/postService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="6" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/controllers/changePasswordController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
