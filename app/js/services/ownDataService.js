@@ -2,20 +2,16 @@
 
 SocialNetwork.factory('ownDataService', function ($http, baseUrl) {
     var ownDataService = {};
-    ownDataService.params = {};
 
     var ownDataServiceUrl = baseUrl + 'me/';
 
-    ownDataService.getNewsFeed = function (headers, success, error) {
-        $http.get(ownDataServiceUrl + '/feed/',
-            {
-                params: this.params,
-                headers: headers
-            })
+    ownDataService.getNewsFeed = function (headers, pageSize, success, error) {
+        $http.get(ownDataServiceUrl + '/feed?StartPostId=&PageSize=' + pageSize,
+            { headers: headers })
             .success(function (data, status, headers, config) {
                 success(data);
             }).error(error);
-};
+    };
 
     ownDataService.getOwnData = function (headers, success, error) {
         $http.get(ownDataServiceUrl, {headers: headers})

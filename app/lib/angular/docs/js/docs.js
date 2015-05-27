@@ -93,7 +93,7 @@ angular.module('DocsController', [])
     currentPage = $scope.currentPage = NG_PAGES[path];
 
     if ( currentPage ) {
-      $scope.partialPath = 'partials/' + path + '.html';
+      $scope.partialPath = 'templates/' + path + '.html';
       $scope.currentArea = NG_NAVIGATION[currentPage.area];
       var pathParts = currentPage.path.split('/');
       var breadcrumb = $scope.breadcrumb = [];

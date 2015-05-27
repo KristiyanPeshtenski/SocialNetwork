@@ -1,26 +1,26 @@
-var SocialNetwork = angular.module('SocialNetwork', ['ngRoute']);
+var SocialNetwork = angular.module('SocialNetwork', ['ngRoute', 'ui.bootstrap.pagination']);
 
 SocialNetwork.constant('baseUrl', 'http://softuni-social-network.azurewebsites.net/api/');
-SocialNetwork.constant('pageSize', 5);
+SocialNetwork.constant('defaultPageSize', 2);
 
 SocialNetwork.config(function ($routeProvider) {
     $routeProvider.when('/', {
-        templateUrl: 'partials/publicHomeScreen.html',
+        templateUrl: 'templates/publicHomeScreen.html',
         controller: 'AuthenticationController'
     });
 
     $routeProvider.when('/user/home', {
-        templateUrl: 'partials/userHomeScreen.html',
-        controller: 'userHomeController'
+        templateUrl: 'templates/userHomeScreen.html',
+        controller: 'UserHomeController'
     });
 
     $routeProvider.when('/user/edit-profile/', {
-        templateUrl: 'partials/editProfileScreen.html',
+        templateUrl: 'templates/editProfileScreen.html',
         controller: 'EditProfileController'
     });
 
     $routeProvider.when('/user/change-password/', {
-        templateUrl: 'partials/changePasswordScreen.html',
+        templateUrl: 'templates/changePasswordScreen.html',
         controller: 'ChangePasswordController'
     });
 

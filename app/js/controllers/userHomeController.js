@@ -1,19 +1,21 @@
-SocialNetwork.controller('userHomeController', function ($scope, $location, ownDataService,
-                                                     notificationService, authentication, pageSize) {
-    $scope.feedParams = {
-        'startPage': 1,
-        'pageSize': pageSize
-    };
+SocialNetwork.controller('UserHomeController', function ($scope, $location, ownDataService,
+                                                         notificationService, authentication, defaultPageSize) {
 
-    $scope.reloadFeed = function () {
-        ownDataService.params = $scope.feedParams;
-        ownDataService.getNewsFeed(authentication.getHeaders(),
+    $scope.feedsPageSize = defaultPageSize;
+
+    $scope.getNewsFeed = function () {
+        ownDataService.getNewsFeed(authentication.getHeaders(), $scope.feedsPageSize,
             function (serverData) {
                 $scope.ownFeeds = serverData;
             }, function (error) {
                 notificationService.showError('fail to load News feed.');
                 console.log(error);
             });
+    };
+
+    $scope.showMoreFeeds = function () {
+        $scope.feedsPageSize = $scope.feedsPageSize * 2;
+        $scope.getNewsFeed();
     };
 
     var getOwnFriendsPreview = function () {
@@ -28,4 +30,5 @@ SocialNetwork.controller('userHomeController', function ($scope, $location, ownD
     };
 
     getOwnFriendsPreview();
+    $scope.getNewsFeed();
 });

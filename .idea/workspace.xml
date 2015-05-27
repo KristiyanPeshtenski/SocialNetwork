@@ -2,14 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="babd1ebd-c948-4718-ba74-787dd876e996" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/css/app.css" afterPath="$PROJECT_DIR$/app/css/app.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/userHomeScreen.html" />
+      <change type="DELETED" beforePath="E:\SoftUni\JavaScript\Angular\PracticalProjectRepo\app\partials\userHomeScreen.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/angular/angular-route.js" afterPath="$PROJECT_DIR$/app/lib/angular/angular-route.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/app.js" afterPath="$PROJECT_DIR$/app/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/angular/docs/js/docs.js" afterPath="$PROJECT_DIR$/app/lib/angular/docs/js/docs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/angular/docs/js/docs.min.js" afterPath="$PROJECT_DIR$/app/lib/angular/docs/js/docs.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/services/ownDataService.js" afterPath="$PROJECT_DIR$/app/js/services/ownDataService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/partials/userHeader.html" afterPath="$PROJECT_DIR$/app/partials/userHeader.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/partials/userHomeScreen.html" afterPath="$PROJECT_DIR$/app/partials/userHomeScreen.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/controllers/userHomeController.js" afterPath="$PROJECT_DIR$/app/js/controllers/userHomeController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="E:\SoftUni\JavaScript\Angular\PracticalProjectRepo\app\js\controllers\mainController.js" afterPath="$PROJECT_DIR$/app/js/controllers/userHomeController.js" />
+      <change type="MOVED" beforePath="E:\SoftUni\JavaScript\Angular\PracticalProjectRepo\app\partials\changePasswordScreen.html" afterPath="$PROJECT_DIR$/app/templates/changePasswordScreen.html" />
+      <change type="MOVED" beforePath="E:\SoftUni\JavaScript\Angular\PracticalProjectRepo\app\partials\editProfileScreen.html" afterPath="$PROJECT_DIR$/app/templates/editProfileScreen.html" />
+      <change type="MOVED" beforePath="E:\SoftUni\JavaScript\Angular\PracticalProjectRepo\app\partials\pagination\pagination.html" afterPath="$PROJECT_DIR$/app/templates/pagination/pagination.html" />
+      <change type="MOVED" beforePath="E:\SoftUni\JavaScript\Angular\PracticalProjectRepo\app\partials\publicHomeScreen.html" afterPath="$PROJECT_DIR$/app/templates/publicHomeScreen.html" />
+      <change type="MOVED" beforePath="E:\SoftUni\JavaScript\Angular\PracticalProjectRepo\app\partials\userHeader.html" afterPath="$PROJECT_DIR$/app/templates/userHeader.html" />
     </list>
     <ignored path="angular-seed.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,19 +40,21 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.8846154">
-              <caret line="19" column="54" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
+            <state vertical-scroll-proportion="-3.1923077">
+              <caret line="21" column="56" selection-start-line="21" selection-start-column="56" selection-end-line="21" selection-end-column="56" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="userHomeScreen.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/partials/userHomeScreen.html">
+        <entry file="file://$PROJECT_DIR$/app/templates/userHomeScreen.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.37535015">
-              <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-              <folding />
+            <state vertical-scroll-proportion="1.3277311">
+              <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+              <folding>
+                <element signature="n#div#0;n#div#1;n#div#1;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -54,7 +63,7 @@
         <entry file="file://$PROJECT_DIR$/app/js/controllers/userHomeController.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+              <caret line="8" column="45" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -64,7 +73,7 @@
         <entry file="file://$PROJECT_DIR$/app/js/services/ownDataService.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <caret line="7" column="79" selection-start-line="7" selection-start-column="79" selection-end-line="7" selection-end-column="79" />
               <folding />
             </state>
           </provider>
@@ -74,7 +83,7 @@
         <entry file="file://$PROJECT_DIR$/app/css/app.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+              <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -84,7 +93,7 @@
         <entry file="file://$PROJECT_DIR$/app/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+              <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -117,7 +126,6 @@
         <option value="$PROJECT_DIR$/app/partials/editProfile.html" />
         <option value="$PROJECT_DIR$/app/js/controllers/ChangePasswordController.js" />
         <option value="$PROJECT_DIR$/app/js/controllers/changePasswordController.js" />
-        <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/app/partials/changePasswordScreen.html" />
         <option value="$PROJECT_DIR$/app/partials/editProfileScreen.html" />
         <option value="$PROJECT_DIR$/app/js/controllers/friendRequestsController.js" />
@@ -129,12 +137,16 @@
         <option value="$PROJECT_DIR$/app/js/controllers/mainController.js" />
         <option value="$PROJECT_DIR$/app/js/controllers/editProfileController.js" />
         <option value="$PROJECT_DIR$/app/js/controllers/authenticationController.js" />
-        <option value="$PROJECT_DIR$/app/js/app.js" />
-        <option value="$PROJECT_DIR$/app/js/services/ownDataService.js" />
         <option value="$PROJECT_DIR$/app/partials/userHeader.html" />
         <option value="$PROJECT_DIR$/app/css/app.css" />
-        <option value="$PROJECT_DIR$/app/js/controllers/userHomeController.js" />
+        <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/app/partials/userHomeScreen.html" />
+        <option value="$PROJECT_DIR$/app/js/services/ownDataService.js" />
+        <option value="$PROJECT_DIR$/app/js/app.js" />
+        <option value="$PROJECT_DIR$/app/js/controllers/userHomeController.js" />
+        <option value="$PROJECT_DIR$/app/templates/editProfileScreen.html" />
+        <option value="$PROJECT_DIR$/app/templates/changePasswordScreen.html" />
+        <option value="$PROJECT_DIR$/app/templates/userHomeScreen.html" />
       </list>
     </option>
   </component>
@@ -220,7 +232,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="partials" />
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="angular-seed" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PracticalProjectRepo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -286,6 +316,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="angular-seed" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PracticalProjectRepo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -310,8 +358,11 @@
       <recent name="E:\SoftUni\JavaScript\Angular\PracticalProjectRepo\app\lib\bootstrap" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.publicHomeScreen.html">
+  <component name="RunManager" selected="JavaScript Debug.userHomeScreen.html">
     <configuration default="false" name="publicHomeScreen.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/angular-seed/app/partials/publicHomeScreen.html">
+      <method />
+    </configuration>
+    <configuration default="false" name="userHomeScreen.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/angular-seed/app/partials/userHomeScreen.html">
       <method />
     </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
@@ -352,12 +403,14 @@
       <envs />
       <method />
     </configuration>
-    <list size="1">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.publicHomeScreen.html" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.userHomeScreen.html" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.publicHomeScreen.html" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.userHomeScreen.html" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.publicHomeScreen.html" />
       </list>
     </recent_temporary>
   </component>
@@ -414,7 +467,13 @@
       <option name="project" value="LOCAL" />
       <updated>1432640376207</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary=" - fix pending requests view&#10;&#10;  - add own friend preview in user home">
+      <created>1432671276934</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1432671276934</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -428,13 +487,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26636904" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32952693" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5029762" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.49702382" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -446,7 +506,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -491,7 +550,8 @@
     <MESSAGE value="- finish edit profile" />
     <MESSAGE value="- add friend request functionality&#10;    &#10;    -view pending requests&#10;    -accept request&#10;    - reject request" />
     <MESSAGE value=" - fix pending requests view&#10;&#10;  - add own friend preview in user home" />
-    <option name="LAST_COMMIT_MESSAGE" value=" - fix pending requests view&#10;&#10;  - add own friend preview in user home" />
+    <MESSAGE value=" - add display news feed functionality&#10;  - and show more posts" />
+    <option name="LAST_COMMIT_MESSAGE" value=" - add display news feed functionality&#10;  - and show more posts" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -500,15 +560,17 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/partials/userHomeScreen.html">
+    <entry file="file://$PROJECT_DIR$/app/templates/userHomeScreen.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="42" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="42" />
-          <folding />
+          <folding>
+            <element signature="n#div#0;n#div#1;n#div#1;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/partials/editProfileScreen.html">
+    <entry file="file://$PROJECT_DIR$/app/templates/editProfileScreen.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
@@ -535,7 +597,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/partials/publicHomeScreen.html">
+    <entry file="file://$PROJECT_DIR$/app/templates/publicHomeScreen.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
@@ -559,11 +621,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/partials/userHomeScreen.html">
+    <entry file="file://$PROJECT_DIR$/app/templates/userHomeScreen.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-          <folding />
+          <folding>
+            <element signature="n#div#0;n#div#1;n#div#1;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -605,7 +669,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/partials/publicHomeScreen.html">
+    <entry file="file://$PROJECT_DIR$/app/templates/publicHomeScreen.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="27" column="6" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
@@ -629,7 +693,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/partials/publicHomeScreen.html">
+    <entry file="file://$PROJECT_DIR$/app/templates/publicHomeScreen.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -685,7 +749,7 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/partials/pagination/pagination.html">
+    <entry file="file://$PROJECT_DIR$/app/templates/pagination/pagination.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.21288015">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
@@ -776,14 +840,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/partials/changePasswordScreen.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1824687">
-          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/controllers/editProfileController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.33675215">
@@ -792,7 +848,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/partials/publicHomeScreen.html">
+    <entry file="file://$PROJECT_DIR$/app/templates/publicHomeScreen.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.30053666">
           <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
@@ -816,17 +872,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/partials/editProfileScreen.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.09123435">
-          <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#div#1;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#div#1;n#fieldset#0;n#form#0;n#div#0;n#div#1;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/controllers/userHeaderController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.82564104">
@@ -835,23 +880,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.8846154">
-          <caret line="19" column="54" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/partials/userHeader.html">
+    <entry file="file://$PROJECT_DIR$/app/templates/userHeader.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6690519">
           <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
@@ -859,10 +888,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/css/app.css">
+    <entry file="file://$PROJECT_DIR$/app/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+          <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -870,7 +899,39 @@
     <entry file="file://$PROJECT_DIR$/app/js/services/ownDataService.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <caret line="7" column="79" selection-start-line="7" selection-start-column="79" selection-end-line="7" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.1923077">
+          <caret line="21" column="56" selection-start-line="21" selection-start-column="56" selection-end-line="21" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/editProfileScreen.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.030411448">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/changePasswordScreen.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="27" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -878,16 +939,18 @@
     <entry file="file://$PROJECT_DIR$/app/js/controllers/userHomeController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+          <caret line="8" column="45" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/partials/userHomeScreen.html">
+    <entry file="file://$PROJECT_DIR$/app/templates/userHomeScreen.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37535015">
-          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-          <folding />
+        <state vertical-scroll-proportion="1.3277311">
+          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding>
+            <element signature="n#div#0;n#div#1;n#div#1;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
