@@ -26,7 +26,7 @@
         </div>
         <!--News Feed-->
         <div class="col-md-5 pull-left">
-            <div class="modal-dialog" ng-repeat="feed in ownFeeds">
+            <div class="modal-dialog" ng-repeat="feed in ownFeeds" ng-controller="postController">
                 <div class="modal-header">
                     <a href="" class="thumbnail pull-left">
                         <img class="img-small" ng-src="{{feed.author.profileImageData || 'img/no_avatar.png'}}" alt=""/>
@@ -57,16 +57,46 @@
                         <span class="badge" id="postLikes{{feed.id}}">likes {{feed.likesCount}}</span>
                     </div>
                     <form name="comment-form">
-                        <div class="form-group pull-left">
-                            <label for="post-comment-box" class="control-label pull-left">Post Your Comment</label>
+                        <div class="form-group">
+                            <label for="post-comment-box" class="control-label pull-left">Post Your Comment:</label>
                             <input name="commentField" id="post-comment-box"
                                    ng-model="commentContent" ng-minlength="2" class="form-control"/>
                         </div>
-                        <span class="badge">{{feed.comments.length}}</span>
-                        <button ng-disabled="commentForm.$invalid" ng-click="addCommentToPost(feed, commentRawContent)" type="button" id="{{feed.id}}" class="btn btn-primary" >Comment
-                            <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
-                        </button>
+                        <div class="form-group pull-left">
+                            <span class="badge">total comments: {{feed.comments.length}}</span>
+                            <button ng-disabled="commentForm.$invalid" ng-click="addCommentToPost(feed, commentRawContent)" type="button" id="{{feed.id}}" class="btn btn-primary" >Comment
+                                <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+                            </button>
+                        </div>
                     </form>
+                </div>    <!--Close comment-form-->
+                <!--comments panel-->
+                <div class="panel panel-default" ng-repeat="comment in feed.comments" ng-controller="CommentController">
+                    <div class="panel-heading">
+                        <img ng-src="{{comment.author.profileImageData|| 'img/no_avatar.png'}}" class="img img-thumbnail" alt="author image"/>
+                        <span class="panel-title">
+                            <strong>{{comment.author.name}}</strong>
+                            posted at: {{comment.date | date: "dd/MM/yy HH:mm:ss"}}
+                            <!--TODO: implement popup when mouseover comment author-->
+                        </span>
+                    </div>
+                    <div class="panel-body">
+                        <p>{{comment.commentContent}}</p>
+                    </div>
+                    <div class="pull-right">
+                        <!--Like button-->
+                        <button type="button" ng-if="!comment.liked" ng-click="likeComment(feed, comment)" class="btn btn-link">
+                            Like
+                            <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                        </button>
+                        <!--Dislike button-->
+                        <button type="button" ng-if="comment.liked" ng-click="dislikeComment(feed, comment)" class="btn btn-link">
+                            Dislike
+                            <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
+                        </button>
+                        <!--number of likes-->
+                        <span class="badge">likes {{comment.likesCount}}</span>
+                    </div>
                 </div>
             </div> <!--close modal-dialog-->
             <a href="" class="btn btn-warning" ng-click="showMoreFeeds()">Show more Feeds</a>
