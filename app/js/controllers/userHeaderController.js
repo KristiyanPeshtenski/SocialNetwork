@@ -1,8 +1,7 @@
 'use strict';
 
 SocialNetwork.controller('UserHeaderController', function ($scope, $location, $route, authentication,
-                       notificationService, ownDataService) {
-
+                                                           notificationService, ownDataService) {
 
     $scope.getOwnInfo = function () {
         ownDataService.getOwnData(authentication.getHeaders(),
@@ -10,7 +9,7 @@ SocialNetwork.controller('UserHeaderController', function ($scope, $location, $r
                 $scope.ownInfo = serverData;
             }, function (error) {
                 notificationService.showError('Cannot load data from server')
-            })
+            });
     };
 
     $scope.getFriendRequests = function () {
@@ -18,22 +17,22 @@ SocialNetwork.controller('UserHeaderController', function ($scope, $location, $r
             function (serverData) {
                 $scope.pendingRequests = serverData;
                 var requestsCount = $scope.pendingRequests.length;
-                if(requestsCount > 0){
+                if (requestsCount > 0) {
                     $scope.requestsCount = requestsCount;
                     $scope.hasPendingRequests = true;
-                }else{
+                } else {
                     $scope.hasPendingRequests = false;
                 }
             }, function (error) {
                 console.log(error);
-            })
+            });
     };
 
     $scope.approveFriendRequest = function (request) {
         ownDataService.approveFriendRequest(request.id, authentication.getHeaders(),
             function (data) {
                 notificationService.showInfo('Friend added.');
-                $route.reload();
+                $window.location.reload();
             }, function (error) {
                 console.log(error);
             });
@@ -43,7 +42,7 @@ SocialNetwork.controller('UserHeaderController', function ($scope, $location, $r
         ownDataService.rejectFriendRequest(request.id, authentication.getHeaders(),
             function (data) {
                 notificationService.showInfo('Friend request rejected.');
-                $route.reload();
+                $window.location.reload();
             }, function (error) {
                 console.log(error);
             });
@@ -56,9 +55,9 @@ SocialNetwork.controller('UserHeaderController', function ($scope, $location, $r
                 //cleanData();
                 authentication.ClearCredentials();
                 $location.path('/');
-        }, function (error) {
-            notificationService.showError('Logout fail.')
-        });
+            }, function (error) {
+                notificationService.showError('Logout fail.')
+            });
     };
 
     $scope.getOwnInfo();

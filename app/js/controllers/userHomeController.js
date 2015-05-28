@@ -21,7 +21,6 @@ SocialNetwork.controller('UserHomeController', function ($scope, $location, ownD
     var getOwnFriendsPreview = function () {
         ownDataService.getOwnFriendsPreview(authentication.getHeaders(),
             function (serverData) {
-                console.log(serverData);
                 $scope.ownFriendsPreview = serverData;
             },
             function (error) {
