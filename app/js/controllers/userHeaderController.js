@@ -12,6 +12,17 @@ SocialNetwork.controller('UserHeaderController', function ($scope, $location, $r
             });
     };
 
+    $scope.sendFriendRequest = function (username) {
+        ownDataService.sendFriendRequest(username, authentication.getHeaders(),
+            function (serverData) {
+                notificationService.showInfo('friend request successfully send.');
+            },
+            function (error) {
+                notificationService.showError('fail to send friend request');
+                console.log(error);
+            });
+    };
+
     $scope.getFriendRequests = function () {
         ownDataService.getFriendRequests(authentication.getHeaders(),
             function (serverData) {
@@ -53,7 +64,7 @@ SocialNetwork.controller('UserHeaderController', function ($scope, $location, $r
             function () {
                 notificationService.showInfo('Logout successful.');
                 //cleanData();
-                authentication.ClearCredentials();
+                authentication.clearCredentials();
                 $location.path('/');
             }, function (error) {
                 notificationService.showError('Logout fail.')

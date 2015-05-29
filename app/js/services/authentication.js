@@ -41,11 +41,11 @@ SocialNetwork.factory('authentication', function ($http, baseUrl) {
         return localStorage['username'];
     };
 
-    service.IsLoggedIn = function () {
+    service.isLoggedIn = function () {
         return localStorage['accessToken'];
     };
 
-    service.ClearCredentials = function () {
+    service.clearCredentials = function () {
         localStorage.clear();
     };
 

@@ -18,7 +18,7 @@ SocialNetwork.controller('UserHomeController', function ($scope, $location, ownD
         $scope.getNewsFeed();
     };
 
-    var getOwnFriendsPreview = function () {
+    $scope.getOwnFriendsPreview = function () {
         ownDataService.getOwnFriendsPreview(authentication.getHeaders(),
             function (serverData) {
                 $scope.ownFriendsPreview = serverData;
@@ -28,6 +28,6 @@ SocialNetwork.controller('UserHomeController', function ($scope, $location, ownD
             });
     };
 
-    getOwnFriendsPreview();
+    $scope.getOwnFriendsPreview();
     $scope.getNewsFeed();
 });

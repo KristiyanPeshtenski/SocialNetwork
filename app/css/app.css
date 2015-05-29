@@ -22,7 +22,7 @@ body{
     border-bottom: 2px solid black;
 }
 
-.edit-profile-container{
+.edit-profile-container, .user-wall-container{
     margin-top: 30px;
 }
 

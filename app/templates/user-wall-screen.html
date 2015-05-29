@@ -1,37 +1,48 @@
-<div ng-include="'templates/userHeader.html'"></div>
+<div ng-include="'templates/user-header.html'"></div>
 
-<div class="container home-screen-container">
-
+<div class="container user-wall-container">
     <div class="row">
-        <div class="header home-screen-header col-lg-12">
-            <h3>News Feed</h3>
+        <div class="col-md-12">
+            <div class="cover-image-container">
+                <img ng-src="{{userWallData.coverImageData}}" alt="cover image"/>
+                <img ng-src="{{userWallData.profileImageData}}" class="profile-image" alt="profile image"/>
+                <span class="user-wall-name">{{userWallData.name}}</span>
+            </div>
+            <!--add friend button-->
+            <div class="pull-right" ng-if="userWallData.username != currentUser" ng-controller="UserHeaderController">
+                <a href="" class="btn btn-warning btn-lg" ng-click="sendFriendRequest(userWallData.username)" ng-if="userWallData.isFriend === false">Send Request</a>
+                <a href="" class="btn btn-info btn-lg disabled" ng-if="userWallData.isFriend === true">Friend</a>
+            </div>
+            <div class="pul"></div>
         </div>
     </div>
     <div class="row">
-        <!--Friends preview-->
+        <!--friend friend preview-->
         <div class="col-md-4 pull-right">
             <div class="panel panel-warning">
                 <div class="panel-heading">
-                    <h3 class="panel-title"> Friends {{ownFriendsPreview.totalCount}} total </h3>
+                    <h3 class="panel-title"> Friends {{friendFriendsPreview.totalCount}} total </h3>
                 </div>
                 <div class="row">
-                    <div ng-repeat="friend in ownFriendsPreview.friends" class="col-md-4 col-md-offset-0 panel-body">
-                        <a href="" class="thumbnail">
-                            <img ng-src="{{friend.profileImageData || 'img/no_avatar.png'}}" class="friend-profile-pic" />
+                    <div ng-repeat="friend in friendFriendsPreview.friends" class="col-md-4 col-md-offset-0 panel-body">
+                        <a href="#/users/wall/{{friend.username}}" class="thumbnail">
+                            <img ng-src="{{friend.profileImageData || 'img/no_avatar.png'}}"
+                                 class="friend-profile-pic"/>
                             <span class="friend-name">{{friend.name}}</span>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
-        <!--News Feed-->
-        <div class="col-md-5 pull-left">
-            <div class="modal-dialog" ng-repeat="feed in ownFeeds" ng-controller="postController">
-                <div class="modal-header">
+        <!--wall feeds-->
+        <div class="col-md-5">
+            <div class="modal-dialog" ng-repeat="feed in userWallFeeds" ng-controller="PostController">
+                <div class="modal-header" data-id="{{feed.id}}">
                     <a href="" class="thumbnail pull-left">
                         <img class="img-small" ng-src="{{feed.author.profileImageData || 'img/no_avatar.png'}}" alt=""/>
                     </a>
                     <span class="modal-title autor-name">{{feed.author.name}}</span>
+
                     <div>
                         <span class="modal-posted-date">
                             <strong>Posted at </strong> {{feed.date | date: "dd MM yyyy 'at' HH:mm:ss"}}
@@ -64,16 +75,20 @@
                         </div>
                         <div class="form-group pull-left">
                             <span class="badge">total comments: {{feed.comments.length}}</span>
-                            <button ng-disabled="commentForm.$invalid" ng-click="addCommentToPost(feed, commentRawContent)" type="button" id="{{feed.id}}" class="btn btn-primary" >Comment
+                            <button ng-disabled="commentForm.$invalid"
+                                    ng-click="addCommentToPost(feed, commentRawContent)" type="button" id="{{feed.id}}"
+                                    class="btn btn-primary">Comment
                                 <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
                             </button>
                         </div>
                     </form>
-                </div>    <!--Close comment-form-->
+                </div>
+                <!--Close comment-form-->
                 <!--comments panel-->
                 <div class="panel panel-default" ng-repeat="comment in feed.comments" ng-controller="CommentController">
                     <div class="panel-heading">
-                        <img ng-src="{{comment.author.profileImageData|| 'img/no_avatar.png'}}" class="img img-thumbnail" alt="author image"/>
+                        <img ng-src="{{comment.author.profileImageData|| 'img/no_avatar.png'}}"
+                             class="img img-thumbnail" alt="author image"/>
                         <span class="panel-title">
                             <strong>{{comment.author.name}}</strong>
                             posted at: {{comment.date | date: "dd/MM/yy HH:mm:ss"}}
@@ -85,12 +100,14 @@
                     </div>
                     <div class="pull-right">
                         <!--Like button-->
-                        <button type="button" ng-if="!comment.liked" ng-click="likeComment(feed, comment)" class="btn btn-link">
+                        <button type="button" ng-if="!comment.liked" ng-click="likeComment(feed, comment)"
+                                class="btn btn-link">
                             Like
                             <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
                         </button>
                         <!--Dislike button-->
-                        <button type="button" ng-if="comment.liked" ng-click="dislikeComment(feed, comment)" class="btn btn-link">
+                        <button type="button" ng-if="comment.liked" ng-click="dislikeComment(feed, comment)"
+                                class="btn btn-link">
                             Dislike
                             <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
                         </button>
@@ -99,8 +116,23 @@
                     </div>
                 </div>
             </div> <!--close modal-dialog-->
-            <a href="" class="btn btn-warning" ng-click="showMoreFeeds()">Show more Feeds</a>
+            <a href="" class="btn btn-warning" ng-click="showMoreWallFeeds()">Show more Feeds</a>
         </div>
-    </div> <!--close div class="row"-->
-</div>
+        <!--post form-->
+        <div class="col-md-4 col-md-offset-3">
+            <form name="postFeedForm"  ng-if="userWallData.username == currentUser || userWallData.isFriend === true" class="form-horizontal">
+                <div>
+                    <label for="post-box" class="control-label">Post on {{userWallData.username}} wall </label>
+                </div>
+                <textarea name="post-box" id="post-box" ng-minlength="2" ng-model="postContent" placeholder="Enter Message..." required>
 
+                </textarea>
+                <div>
+                    <button class="btn btn-success" ng-controller="PostController" ng-click="addPost(postContent)" ng-disabled="postFeedForm.$invalid">
+                        Post
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -14,7 +14,7 @@ SocialNetwork.controller('AuthenticationController', function ($scope, $location
                 notificationService.showInfo('Login Successful.');
                 authentication.SetCredentials(serverData);
                 ClearData();
-                $location.path('/user/home');
+                $location.path('/users/feeds');
             },
             function (error) {
                 notificationService.showError('Unsuccessful login.');
@@ -28,11 +28,11 @@ SocialNetwork.controller('AuthenticationController', function ($scope, $location
                 notificationService.showInfo('Register Successful.');
                 authentication.SetCredentials(serverData);
                 ClearData();
-                $location.path('user/home');
+                $location.path('/users/feeds');
             },
             function (error) {
                 notificationService.showError('register fail.');
                 console.log(error);
-            })
+            });
     };
 });

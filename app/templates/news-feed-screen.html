@@ -1,0 +1,106 @@
+<div ng-include="'templates/user-header.html'"></div>
+
+<div class="container home-screen-container">
+
+    <div class="row">
+        <div class="header home-screen-header col-lg-12">
+            <h3>News Feed</h3>
+        </div>
+    </div>
+    <div class="row">
+        <!--Friends preview-->
+        <div class="col-md-4 pull-right">
+            <div class="panel panel-warning">
+                <div class="panel-heading">
+                    <h3 class="panel-title"> Friends {{ownFriendsPreview.totalCount}} total </h3>
+                </div>
+                <div class="row">
+                    <div ng-repeat="friend in ownFriendsPreview.friends" class="col-md-4 col-md-offset-0 panel-body">
+                        <a href="#/users/wall/{{friend.username}}" class="thumbnail">
+                            <img ng-src="{{friend.profileImageData || 'img/no_avatar.png'}}" class="friend-profile-pic" />
+                            <span class="friend-name">{{friend.name}}</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--News Feed-->
+        <div class="col-md-5 pull-left">
+            <div class="modal-dialog" ng-repeat="feed in ownFeeds" ng-controller="PostController">
+                <div class="modal-header">
+                    <a href="" class="thumbnail pull-left">
+                        <img class="img-small" ng-src="{{feed.author.profileImageData || 'img/no_avatar.png'}}" alt=""/>
+                    </a>
+                    <span class="modal-title autor-name">{{feed.author.name}}</span>
+                    <div>
+                        <span class="modal-posted-date">
+                            <strong>Posted at </strong> {{feed.date | date: "dd MM yyyy 'at' HH:mm:ss"}}
+                        </span>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <p>{{feed.postContent}}</p>
+                </div>
+                <div class="modal-footer">
+                    <div class="pull-right">
+                        <!--Like button-->
+                        <button type="button" ng-if="!feed.liked" ng-click="likePost(feed)" class="btn btn-link">
+                            Like
+                            <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                        </button>
+                        <!--Dislike button-->
+                        <button type="button" ng-if="feed.liked" ng-click="dislikePost(feed)" class="btn btn-link">
+                            Dislike
+                            <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
+                        </button>
+                        <!--number of likes-->
+                        <span class="badge" id="postLikes{{feed.id}}">likes {{feed.likesCount}}</span>
+                    </div>
+                    <form name="comment-form">
+                        <div class="form-group">
+                            <label for="post-comment-box" class="control-label pull-left">Post Your Comment:</label>
+                            <input name="commentField" id="post-comment-box"
+                                   ng-model="commentContent" ng-minlength="2" class="form-control"/>
+                        </div>
+                        <div class="form-group pull-left">
+                            <span class="badge">total comments: {{feed.comments.length}}</span>
+                            <button ng-disabled="commentForm.$invalid" ng-click="addCommentToPost(feed, commentRawContent)" type="button" id="{{feed.id}}" class="btn btn-primary" >Comment
+                                <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                    </form>
+                </div>    <!--Close comment-form-->
+                <!--comments panel-->
+                <div class="panel panel-default" ng-repeat="comment in feed.comments" ng-controller="CommentController">
+                    <div class="panel-heading">
+                        <img ng-src="{{comment.author.profileImageData|| 'img/no_avatar.png'}}" class="img img-thumbnail" alt="author image"/>
+                        <span class="panel-title">
+                            <strong>{{comment.author.name}}</strong>
+                            posted at: {{comment.date | date: "dd/MM/yy HH:mm:ss"}}
+                            <!--TODO: implement popup when mouseover comment author-->
+                        </span>
+                    </div>
+                    <div class="panel-body">
+                        <p>{{comment.commentContent}}</p>
+                    </div>
+                    <div class="pull-right">
+                        <!--Like button-->
+                        <button type="button" ng-if="!comment.liked" ng-click="likeComment(feed, comment)" class="btn btn-link">
+                            Like
+                            <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                        </button>
+                        <!--Dislike button-->
+                        <button type="button" ng-if="comment.liked" ng-click="dislikeComment(feed, comment)" class="btn btn-link">
+                            Dislike
+                            <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
+                        </button>
+                        <!--number of likes-->
+                        <span class="badge">likes {{comment.likesCount}}</span>
+                    </div>
+                </div>
+            </div> <!--close modal-dialog-->
+            <a href="" class="btn btn-warning" ng-click="showMoreFeeds()">Show more Feeds</a>
+        </div>
+    </div> <!--close div class="row"-->
+</div>
+

@@ -1,6 +1,6 @@
 'use strict';
 
-SocialNetwork.controller('postController', function ($scope, $route, $routeParams, authentication,
+SocialNetwork.controller('PostController', function ($scope, $route, $routeParams, authentication,
                                                      postService, notificationService) {
     $scope.addPost = function (postContent) {
         var postData = {
@@ -9,7 +9,8 @@ SocialNetwork.controller('postController', function ($scope, $route, $routeParam
         };
         postService.addPost(postData, authentication.getHeaders(),
             function (serverData) {
-
+                $route.reload();
+                notificationService.showInfo('Post added.')
             },
             function (error) {
                 console.log(error);

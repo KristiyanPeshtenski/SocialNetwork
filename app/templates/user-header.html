@@ -21,13 +21,13 @@
         <div class="navbar-collapse collapse navbar-right" id="navbar-main">
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="#/users/:{{ownInfo.username}}">
+                    <a href="#/users/feeds">
                         <img class="img-responsive navbar-profile-image"
                              ng-src="{{ownInfo.profileImageData || 'img/no_avatar.png'}}"/>
                         <span><strong>{{ownInfo.username}}</strong></span>
                     </a>
                 </li>
-                <li><a href="#/user/home">Home</a>
+                <li><a href="#/users/feeds">Home</a>
                 </li>
                 <li class="dropdown">
                     <a href="" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -48,15 +48,14 @@
                                     <a href="" ng-click="rejectFriendRequest(request)" class="btn btn-info btn-sm">Decline</a>
                                 </div>
                             </div>
-
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#/user/edit-profile">Edit Profile</a>
+                    <a href="#/users/edit-profile">Edit Profile</a>
                 </li>
                 <li>
-                    <a href="#/user/change-password">Change Password</a>
+                    <a href="#/users/change-password">Change Password</a>
                 </li>
                 <li>
                     <a href="#" ng-click="Logout()">Logout</a>
@@ -65,8 +64,3 @@
         </div>
     </div>
 </div>
-
-
-<!--<div ng-mouseleave="hideFriendRequestBox()" ng-if="hasPendingRequests"-->
-     <!--ng-include="'templates/friendRequestsBox.html'"></div>-->
-
