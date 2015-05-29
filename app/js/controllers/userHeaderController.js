@@ -1,6 +1,6 @@
 'use strict';
 
-SocialNetwork.controller('UserHeaderController', function ($scope, $location, $route, authentication,
+SocialNetwork.controller('UserHeaderController', function ($scope, $location, $route, $routeParams, authentication,
                                                            notificationService, ownDataService) {
 
     $scope.getOwnInfo = function () {

@@ -67,17 +67,16 @@
                         <!--number of likes-->
                         <span class="badge" id="postLikes{{feed.id}}">likes {{feed.likesCount}}</span>
                     </div>
-                    <form name="comment-form">
+                    <form name="commentForm" class="form-horizontal">
                         <div class="form-group">
                             <label for="post-comment-box" class="control-label pull-left">Post Your Comment:</label>
-                            <input name="commentField" id="post-comment-box"
+                            <input name="commentField" id="post-comment-box" type="text" required
                                    ng-model="commentContent" ng-minlength="2" class="form-control"/>
                         </div>
                         <div class="form-group pull-left">
                             <span class="badge">total comments: {{feed.comments.length}}</span>
-                            <button ng-disabled="commentForm.$invalid"
-                                    ng-click="addCommentToPost(feed, commentRawContent)" type="button" id="{{feed.id}}"
-                                    class="btn btn-primary">Comment
+                            <button ng-disabled="commentForm.$invalid" ng-controller="CommentController" ng-click="addComment(feed, commentContent)"
+                                    type="button" class="btn btn-primary">Comment
                                 <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
                             </button>
                         </div>

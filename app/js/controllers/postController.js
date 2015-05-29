@@ -53,6 +53,4 @@ SocialNetwork.controller('PostController', function ($scope, $route, $routeParam
                 console.log(error);
             });
     };
-    
-
-})
+});
