@@ -5,7 +5,7 @@
         <div class="col-md-12">
             <div class="cover-image-container">
                 <img ng-src="{{userWallData.coverImageData}}" alt="cover image"/>
-                <img ng-src="{{userWallData.profileImageData}}" class="profile-image" alt="profile image"/>
+                <img ng-src="{{userWallData.profileImageData || 'img/no_avatar.png'}}" class="profile-image" alt="profile image"/>
                 <span class="user-wall-name">{{userWallData.name}}</span>
             </div>
             <!--add friend button-->

@@ -17,12 +17,9 @@ SocialNetwork.factory('userDataService', function ($http, baseUrl) {
                 success(data);
             }).error(error);
     };
-        //TODO: insert searchTerms param
-    userDataService.searchUserByName = function (searchData, headers, success, error) {
-        $http.get(userDataUrl + 'search?searchTerms=searchData', {
-            params: this.params,
-            headers: headers
-        })
+
+    userDataService.searchUserByName = function (searchTerm, headers, success, error) {
+        $http.get(userDataUrl + 'search?searchTerm=' + searchTerm, { headers: headers })
             .success(function (data, status, headers, config) {
                 success(data);
             }).error(error);

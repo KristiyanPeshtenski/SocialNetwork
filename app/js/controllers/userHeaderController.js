@@ -1,7 +1,7 @@
 'use strict';
 
 SocialNetwork.controller('UserHeaderController', function ($scope, $location, $route, $routeParams, authentication,
-                                                           notificationService, ownDataService) {
+                                                           userDataService, notificationService, ownDataService) {
 
     $scope.getOwnInfo = function () {
         ownDataService.getOwnData(authentication.getHeaders(),
@@ -68,6 +68,17 @@ SocialNetwork.controller('UserHeaderController', function ($scope, $location, $r
                 $location.path('/');
             }, function (error) {
                 notificationService.showError('Logout fail.')
+            });
+    };
+    
+    $scope.searchUserByName = function (searchTerms) {
+        userDataService.searchUserByName(searchTerms, authentication.getHeaders(),
+            function (serverData) {
+                $scope.usersFound = serverData;
+            },
+            function (error) {
+                notificationService.showError('cannot load data from server.');
+                console.log(error);
             });
     };
 

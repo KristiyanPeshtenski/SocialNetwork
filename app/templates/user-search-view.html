@@ -1,0 +1,8 @@
+<table class="table table-striped table-hover" ng-controller="UserHeaderController">
+    <tr ng-repeat="user in usersFound">
+        <td class="success">
+            <img ng-src="{{user.profileImageData || 'img/no_avatar.png'}}" alt="profile image"/>
+            <a href="#/users/wall/{{user.username}}">{{user.name}}</a>
+        </td>
+    </tr>
+</table>
