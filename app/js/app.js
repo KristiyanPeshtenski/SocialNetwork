@@ -32,3 +32,15 @@ SocialNetwork.config(function ($routeProvider) {
     $routeProvider.otherwise({redirectTo: '/'});
 });
 
+    // Authorization check
+SocialNetwork.run(function ($rootScope, $location, authentication) {
+    $rootScope.$on('$locationChangeStart', function (event) {
+        if($location.path().indexOf('/users/') != -1 && !authentication.isLoggedIn()){
+            $location.path('/');
+        }
+        if($location.path().indexOf('/users/') == -1 && authentication.isLoggedIn()){
+            $location.path('users/feeds');
+        }
+    })
+});
+
