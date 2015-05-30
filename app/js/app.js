@@ -11,7 +11,7 @@ SocialNetwork.config(function ($routeProvider) {
 
     $routeProvider.when('/users/feeds', {
         templateUrl: 'templates/news-feed-screen.html',
-        controller: 'UserHomeController'
+        controller: 'NewsFeedController'
     });
 
     $routeProvider.when('/users/edit-profile/', {

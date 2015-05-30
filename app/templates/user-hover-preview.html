@@ -1,0 +1,23 @@
+<div class="panel panel-default">
+    <div class="pull-left">
+        <img ng-src="{{hoveredUserPreviewData.profileImageData || 'img/no_avatar.png'}}"
+             class="img img-thumbnail user-hover-popup-image" alt="profile-image"/>
+    </div>
+    <div>
+        <a href="#/users/wall/{{hoverdUserPreviewData.username}}">
+            <h4>{{hoveredUserPreviewData.name}}</h4>
+        </a>
+    </div>
+    <div>
+        <strong>Gender: </strong>
+        <span ng-if="hoveredUserPreviewData.gender == 'male'">Male</span>
+        <span ng-if="hoveredUserPreviewData.gender == 'female'">Female</span>
+        <span ng-if="hoveredUserPreviewData.gender == 'other'">Other</span>
+    </div>
+    <div ng-if="hoveredUserPreviewData.username != currentUser">
+        <a href="" ng-if="hoveredUserPreviewData.isFriend" class="btn btn-success disabled">Friend</a>
+        <a href="" ng-if="hoveredUserPreviewData.hasPendingRequest" class="btn btn-info disabled">Pending</a>
+        <a href="" ng-if="!hoveredUserPreviewData.isFriend && !hoveredUserPreviewData.hasPendinRequest"
+           ng-click="sendFriendRequest(hoveredUserPreviewData.username)" class="btn btn-danger">Send Request</a>
+    </div>
+</div>

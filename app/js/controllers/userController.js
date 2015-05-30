@@ -1,6 +1,6 @@
 'use strict';
 
-SocialNetwork.controller('UserHeaderController', function ($scope, $location, $route, $routeParams, authentication,
+SocialNetwork.controller('UserController', function ($scope, $location, $route, $routeParams, authentication,
                                                            userDataService, notificationService, ownDataService) {
 
     $scope.getOwnInfo = function () {
@@ -80,6 +80,22 @@ SocialNetwork.controller('UserHeaderController', function ($scope, $location, $r
                 notificationService.showError('cannot load data from server.');
                 console.log(error);
             });
+    };
+
+    $scope.hoveredUserPReview = function (feed) {
+        userDataService.getUserPreviewData(feed.author.username, authentication.getHeaders(),
+            function (serverData) {
+                $scope.hoveredUserPreviewData = serverData;
+                $scope.isUserHovered = true;
+                $scope.hoveredUserPostId = feed.id;
+            },
+            function (error) {
+                console.log(error);
+            })
+    };
+
+    $scope.stopUserPreview = function () {
+        $scope.isUserHovered = false;
     };
 
     $scope.getOwnInfo();

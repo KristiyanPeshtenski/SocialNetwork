@@ -1,7 +1,6 @@
 <div ng-include="'templates/user-header.html'"></div>
 
-<div class="container home-screen-container">
-
+<div class="container home-screen-container" ng-controller="UserController">
     <div class="row">
         <div class="header home-screen-header col-lg-12">
             <h3>News Feed</h3>
@@ -31,7 +30,11 @@
                     <a href="" class="thumbnail pull-left">
                         <img class="img-small" ng-src="{{feed.author.profileImageData || 'img/no_avatar.png'}}" alt=""/>
                     </a>
-                    <span class="modal-title autor-name">{{feed.author.name}}</span>
+                    <a href="#/users/wall/{{feed.author.username}}">
+                        <span ng-mouseenter="hoveredUserPReview(feed)" class="modal-title autor-name">{{feed.author.name}}</span>
+                    </a>
+                    <div ng-mouseleave="stopUserPreview()" ng-if="isUserHovered && hoveredUserPostId == feed.id"
+                         ng-include="'templates/user-hover-preview.html'"></div>
                     <div>
                         <span class="modal-posted-date">
                             <strong>Posted at </strong> {{feed.date | date: "dd MM yyyy 'at' HH:mm:ss"}}

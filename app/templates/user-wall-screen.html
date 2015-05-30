@@ -9,7 +9,7 @@
                 <span class="user-wall-name">{{userWallData.name}}</span>
             </div>
             <!--add friend button-->
-            <div class="pull-right" ng-if="userWallData.username != currentUser" ng-controller="UserHeaderController">
+            <div class="pull-right" ng-if="userWallData.username != currentUser" ng-controller="UserController">
                 <a href="" class="btn btn-warning btn-lg" ng-click="sendFriendRequest(userWallData.username)" ng-if="userWallData.isFriend === false">Send Request</a>
                 <a href="" class="btn btn-info btn-lg disabled" ng-if="userWallData.isFriend === true">Friend</a>
             </div>
@@ -35,14 +35,17 @@
             </div>
         </div>
         <!--wall feeds-->
-        <div class="col-md-5">
+        <div class="col-md-5" ng-controller="UserController">
             <div class="modal-dialog" ng-repeat="feed in userWallFeeds" ng-controller="PostController">
                 <div class="modal-header" data-id="{{feed.id}}">
                     <a href="" class="thumbnail pull-left">
                         <img class="img-small" ng-src="{{feed.author.profileImageData || 'img/no_avatar.png'}}" alt=""/>
                     </a>
-                    <span class="modal-title autor-name">{{feed.author.name}}</span>
-
+                    <a href="#/users/wall/{{feed.username}}">
+                        <span class="modal-title autor-name" ng-mouseenter="hoveredUserPReview(feed)">{{feed.author.name}}</span>
+                    </a>
+                    <div ng-mouseleave="stopUserPreview()" ng-if="isUserHovered && hoveredUserPostId == feed.id"
+                            ng-include="'templates/user-hover-preview.html'"></div>
                     <div>
                         <span class="modal-posted-date">
                             <strong>Posted at </strong> {{feed.date | date: "dd MM yyyy 'at' HH:mm:ss"}}

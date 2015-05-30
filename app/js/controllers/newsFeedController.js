@@ -1,4 +1,4 @@
-SocialNetwork.controller('UserHomeController', function ($scope, $location, ownDataService, postService,
+SocialNetwork.controller('NewsFeedController', function ($scope, $location, ownDataService, postService,
                                                          notificationService, authentication, defaultPageSize) {
 
     $scope.feedsPageSize = defaultPageSize;
