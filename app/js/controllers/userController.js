@@ -98,6 +98,11 @@ SocialNetwork.controller('UserController', function ($scope, $location, $route, 
         $scope.isUserHovered = false;
     };
 
+    $scope.getCurrentUserUsername = function () {
+        $scope.currentUser = localStorage['username'];
+    };
+
     $scope.getOwnInfo();
     $scope.getFriendRequests();
+    $scope.getCurrentUserUsername();
 });

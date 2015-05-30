@@ -37,6 +37,8 @@
         <!--wall feeds-->
         <div class="col-md-5" ng-controller="UserController">
             <div class="modal-dialog" ng-repeat="feed in userWallFeeds" ng-controller="PostController">
+                <button type="button" ng-if="feed.author.username === currentUser || feed.wallOwner.username === currentUser"
+                        ng-click="deleteWallPost(feed)" class="close" data-dismis="modal" aria-hidden="true">x</button>
                 <div class="modal-header" data-id="{{feed.id}}">
                     <a href="" class="thumbnail pull-left">
                         <img class="img-small" ng-src="{{feed.author.profileImageData || 'img/no_avatar.png'}}" alt=""/>

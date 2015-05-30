@@ -6,8 +6,6 @@ SocialNetwork.controller('UserWallController', function ($scope, $route, $routeP
 
     $scope.getUserFullData = function (username) {
         if (authentication.isLoggedIn()) {
-            $scope.currentUser = localStorage['username'];
-            console.log($scope.currentUser);
             userDataService.getUserFullData(username, authentication.getHeaders(),
                 function (serverData) {
                     $scope.userWallData = serverData;
@@ -50,5 +48,4 @@ SocialNetwork.controller('UserWallController', function ($scope, $route, $routeP
     $scope.getUserFullData($routeParams.username);
     $scope.getWallPosts($routeParams.username);
     $scope.getFriendFriendsPreview($routeParams.username);
-
 });

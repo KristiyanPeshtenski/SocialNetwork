@@ -53,4 +53,34 @@ SocialNetwork.controller('PostController', function ($scope, $route, $routeParam
                 console.log(error);
             });
     };
+
+    $scope.deleteFeedPost = function (post) {
+        if(confirm(' Are you sure you wont to delete this post? ')){
+            postService.deletePostById(post.id, authentication.getHeaders(),
+                function (serverData) {
+                    var postIndex = $scope.ownFeeds.indexOf(post);
+                    $scope.ownFeeds.splice(postIndex, 1);
+                    notificationService.showInfo('post successfully deleted');
+                },
+                function (error) {
+                    console.log(error);
+                    notificationService.showError('delete post fail.')
+                })
+        }
+    };
+
+    $scope.deleteWallPost = function (post) {
+        if(confirm(' Are you sure you wont to delete this post?')){
+            postService.deletePostById(post.id, authentication.getHeaders(),
+                function (serverData) {
+                    var postIndex = $scope.userWallFeeds.indexOf(post);
+                    $scope.userWallFeeds.splice(postIndex, 1);
+                    notificationService.showInfo('post successfully deleted.');
+                },
+                function (serverData) {
+                    console.log(error);
+                    notificationService.showError('delete post fail.')
+                })
+        }
+    }
 });
