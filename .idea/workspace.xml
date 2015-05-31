@@ -2,13 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="babd1ebd-c948-4718-ba74-787dd876e996" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/default-cover.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/css/app.css" afterPath="$PROJECT_DIR$/app/css/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/news-feed-screen.html" afterPath="$PROJECT_DIR$/app/templates/news-feed-screen.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/user-search-view.html" afterPath="$PROJECT_DIR$/app/templates/user-search-view.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/user-wall-screen.html" afterPath="$PROJECT_DIR$/app/templates/user-wall-screen.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/controllers/userController.js" afterPath="$PROJECT_DIR$/app/js/controllers/userController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/welcome-screen.html" afterPath="$PROJECT_DIR$/app/templates/welcome-screen.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="angular-seed.iws" />
@@ -493,7 +486,13 @@
       <option name="project" value="LOCAL" />
       <updated>1433013411941</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Styles added">
+      <created>1433073092637</created>
+      <option name="number" value="00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1433073092637</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TodoView">
@@ -561,7 +560,8 @@
     <MESSAGE value="Popup on user hover implemented&#10;" />
     <MESSAGE value="- Guest Authorization check added" />
     <MESSAGE value="- delete post implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="- delete post implemented" />
+    <MESSAGE value="Styles added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Styles added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
