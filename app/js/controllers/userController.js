@@ -77,7 +77,6 @@ SocialNetwork.controller('UserController', function ($scope, $location, $route, 
                 $scope.usersFound = serverData;
             },
             function (error) {
-                notificationService.showError('cannot load data from server.');
                 console.log(error);
             });
     };
