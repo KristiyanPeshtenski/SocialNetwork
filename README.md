@@ -1,2 +1,2 @@
 # SocialNetwork
-AngularJS Practical exam
+AngularJS Practical exam @ Softuni
